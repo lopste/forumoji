@@ -10,6 +10,7 @@ html.neutral {
   --text: #181a1c;
   --sidebar: #f7f7f7;
   --highlight: #f7f7f7;
+  --search-bar: #000000;
 }
 
 html.default {
@@ -19,6 +20,7 @@ html.default {
   --text: #181a1c;
   --sidebar: #f7f7f7;
   --highlight: #ffaa00;
+  --search-bar: #ffffff;
 }
 
 html.dark {
@@ -28,6 +30,7 @@ html.dark {
   --text: #fff;
   --sidebar: #0a0a0a;
   --highlight: #ffffff;
+  --search-bar: #ffffff;
 }
 
 html.blue {
@@ -37,6 +40,7 @@ html.blue {
   --text: #181a1c;
   --sidebar: #f7f7f7;
   --highlight: #28a5da;
+  --search-bar: #ffffff;
 }
 
 html.blue-dark {
@@ -46,6 +50,7 @@ html.blue-dark {
   --text: #fff;
   --sidebar: #0a0a0a;
   --highlight: #ffffff;
+  --search-bar: #ffffff;
 }
 
 /* ---- */
@@ -96,11 +101,22 @@ h1 {
 }
 
 #search {
+  appearance: none;
+  max-width: 20em;
   grid-area: search;
   height: 2em;
-  max-width: 20em;
-  /* vertical-align: middle; */
   margin: auto 0 auto 0;
+  font-size: .8em;
+  /* vertical-align: middle; */
+  background-color: var(--header);
+  color: var(--search-bar);
+  border: var(--search-bar) solid 2px;
+  border-radius: 5px;
+}
+
+#search::placeholder {
+  color: var(--search-bar);
+  opacity: .8;
 }
 
 #links {
